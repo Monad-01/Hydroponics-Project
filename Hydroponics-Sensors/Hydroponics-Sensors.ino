@@ -1,48 +1,21 @@
-  	
-#include "Arduino_SensorKit.h"
-  
-#define LED 6
-#define Environment Environment_I2C
+#include <DFRobot_DHT20.h>
+#include <U8g2lib.h>
+
+DFRobot_DHT20 dht20;
+U8G2_SSD1306_128X64_NONAME_1_SW_I2C u8g2(U8G2_R0, /* SCL= */ 2, /* SDA= */3, /* reset=*/ U8X8_PIN_NONE);
 
 void setup() {
-  Wire.begin();
-  // Environment.begin();
-
-  Oled.begin();
-  Oled.setFlipMode(true); // Sets the rotation of the screen
-
-  
   // Serial.begin(9600);
-  
+  // dht20.begin();
 
   
-
-  // pinMode(LED,OUTPUT);    //Sets the pinMode to Output 
 }
  
 void loop() {
-  // put your main code here, to run repeatedly:
-  // digitalWrite(LED, HIGH); //Sets the voltage to high 
-  // delay(1000);					   //Waits for 1000 milliseconds 
-  // digitalWrite(LED, LOW);  //Sets the voltage to low
-  // delay(1000);             //Waits for 1000 milliseconds 
-
-  // Serial.print("Temperature = ");
-  // Serial.print(Environment.readTemperature());
-  // Serial.println(" C");
+  // //Get ambient temperature
+  // Serial.print("Temperature:"); Serial.print(dht20.getTemperature());Serial.print("C ");
+  // //Get relative humidity
+  // Serial.print("Humidity:"); Serial.print(dht20.getHumidity()*100);Serial.println(" %RH");
   
-  // Serial.print("Humidity = ");
-  // Serial.print(Environment.readHumidity());
-  // Serial.println(" %");
-
-  int random_value = analogRead(A0);
- 
-  Oled.setFont(u8x8_font_chroma48medium8_r);
-  Oled.setCursor(0, 33);
-  Oled.print("Temp");
-  // Oled.print(Environment.readTemperature());
-  Oled.print(" CDS");
-  Oled.refreshDisplay();
-  
-  delay(1000); // Delay for OLED display update
+  delay(10000);
 }
