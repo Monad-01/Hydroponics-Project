@@ -8,7 +8,7 @@ Welcome to the Smart Hydroponic Monitoring System repository! This project provi
 
 - **Sensor Integration**: DHT20 and TDS sensors measure temperature, humidity, and Total Dissolved Solids (TDS) in the nutrient solution.
 - **Data Visualization**: Real-time data is displayed on an LCD screen for monitoring temperature, humidity, and TDS levels.
-- **Continuous Monitoring**: Regular sensor readings are processed and logged for detailed analytics.
+- **Continuous Monitoring**: Regular sensor readings are processed every 5 seconds, to ensure optimal environment levels are met.
 
 ## How It Works
 
