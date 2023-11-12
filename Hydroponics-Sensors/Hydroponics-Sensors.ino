@@ -66,7 +66,6 @@ void loop() {
     analogSampleTimepoint = millis();
     analogBuffer[analogBufferIndex] = analogRead(TdsSensorPin); // Read the analog value from the sensor
     analogBufferIndex++;
-    if(analogBufferIndex == SCOUNT){ 
     if (analogBufferIndex == SCOUNT) {
       analogBufferIndex = 0; // Reset the index when the buffer is full
     }
