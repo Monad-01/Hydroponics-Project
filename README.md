@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Smart Hydroponic Monitoring System repository! This cutting-edge project utilizes software and hardware integration to provide real-time insights into hydroponic environments, ensuring optimal conditions for plant growth.
+Welcome to the Smart Hydroponic Monitoring System repository! This project utilizes software and hardware integration to provide real-time insights into hydroponic environments, ensuring optimal conditions for plant growth.
 
 ## Features
 
@@ -14,21 +14,21 @@ Welcome to the Smart Hydroponic Monitoring System repository! This cutting-edge 
 
 ## How It Works
 
-The system employs Arduino-based firmware to interface with sensors and displays. It takes advantage of software algorithms to process data efficiently and provide accurate readings, fostering an environment conducive to optimal plant growth.
+The system takes regular readings from the sensors and displays the information on an LCD screen. Additionally, TDS values are logged and printed to the serial monitor every 5 seconds, offering more detailed insights into the nutrient concentration over time.
 
 ## Setup Instructions
 
 1. **Hardware Connection**: Connect the DHT20 sensor for temperature and humidity, the TDS sensor for nutrient concentration, and an LCD screen to the Arduino board following the provided schematics.
 
-2. **Code Deployment**: Upload the sophisticated Arduino sketch (`Hydroponics-Monitoring.ino`) using the Arduino IDE, showcasing your proficiency in firmware development.
+2. **Code Deployment**: Upload the Arduino sketch (`Hydroponics-Monitoring.ino`) to your Arduino board using the Arduino IDE.
 
-3. **Real-Time Monitoring**: Power up the system to experience the seamless integration of hardware and software, providing real-time insights into hydroponic conditions.
+3. **Real-Time Monitoring**: Power up the system, and you should see real-time readings on the LCD screen.
 
 ## Repository Structure
 
-- `Hydroponics-Monitoring.ino`: The centerpiece of the project, showcasing your firmware development skills.
+- `Hydroponics-Monitoring.ino`: The main Arduino sketch containing the code for the hydroponic monitoring system.
 
-- `libraries/`: Houses essential libraries for DHT20, U8g2, and LiquidCrystal_I2C, highlighting your expertise in leveraging existing tools.
+- `libraries/`: Houses essential libraries for DHT20 and LiquidCrystal_I2C.
 
 ## Stretch Goals
 
